@@ -768,9 +768,13 @@ if(NANO_GUI OR RAIBLOCKS_GUI)
     set_target_properties(
       nano_wallet_com
       PROPERTIES COMPILE_FLAGS "-DBOOST_ASIO_HAS_STD_ARRAY=1"
-                 OUTPUT_NAME "nano_wallet"
+                 OUTPUT_NAME "paw_wallet"
                  SUFFIX ".com")
   endif()
+
+  set_target_properties(nano_node PROPERTIES OUTPUT_NAME "paw_node")
+  set_target_properties(nano_rpc PROPERTIES OUTPUT_NAME "paw_rpc")
+  set_target_properties(nano_wallet PROPERTIES OUTPUT_NAME "paw_wallet")
 
   set_target_properties(
     qt nano_wallet PROPERTIES COMPILE_FLAGS
@@ -840,10 +844,11 @@ if(NANO_GUI OR RAIBLOCKS_GUI)
     )
     set(CPACK_NSIS_MUI_ICON ${CMAKE_SOURCE_DIR}/Nano.ico)
     set(CPACK_NSIS_DISPLAY_NAME "Nano${NANO_PREFIX}")
-    set(CPACK_NSIS_URL_INFO_ABOUT "https://nano.org")
-    set(CPACK_NSIS_CONTACT "info@nano.org")
-    set(CPACK_NSIS_MENU_LINKS "nano_wallet.exe" "Nano Wallet"
-                              "https://nano.org" "Nano website")
+    set(CPACK_NSIS_URL_INFO_ABOUT "https://paw.digital")
+    set(CPACK_NSIS_CONTACT "team@paw.digital")
+    set(CPACK_NSIS_MENU_LINKS "paw_wallet.exe" "Paw Wallet"
+                              "https://paw.digital" "Paw website")
+    
     set(CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL ON)
     get_target_property(Qt5WindowsPlugin Qt5::QWindowsIntegrationPlugin
                         LOCATION)
