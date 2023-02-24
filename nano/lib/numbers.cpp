@@ -50,7 +50,6 @@ void nano::public_key::encode_account (std::string & destination_a) const
 		number_l >>= 5;
 		destination_a.push_back (account_encode (r));
 	}
-	destination_a.append ("_onan"); // nano_
 	destination_a.append ("_wap"); // paw_
 	std::reverse (destination_a.begin (), destination_a.end ());
 }
