@@ -42,8 +42,8 @@ if(MSVC)
   add_definitions(/MP)
 endif()
 
-set(CPACK_PACKAGE_VERSION_MAJOR "25")
-set(CPACK_PACKAGE_VERSION_MINOR "0")
+set(CPACK_PACKAGE_VERSION_MAJOR "1")
+set(CPACK_PACKAGE_VERSION_MINOR "8")
 set(CPACK_PACKAGE_VERSION_PATCH "0")
 if(CI_BUILD AND CI_VERSION_PRE_RELEASE)
   set(CPACK_PACKAGE_VERSION_PRE_RELEASE "${CI_VERSION_PRE_RELEASE}")
@@ -154,13 +154,13 @@ set_property(
   CACHE ACTIVE_NETWORK PROPERTY STRINGS nano_dev_network nano_beta_network
                                 nano_live_network nano_test_network)
 set(CPACK_PACKAGE_NAME
-    "nano-node"
+    "paw-node"
     CACHE STRING "" FORCE)
 set(CPACK_NSIS_PACKAGE_NAME
-    "Nano"
+    "Paw"
     CACHE STRING "" FORCE)
 set(CPACK_PACKAGE_INSTALL_DIRECTORY
-    "nanocurrency"
+    "pawcurrency"
     CACHE STRING "" FORCE)
 set(NANO_SERVICE "nanocurrency.service")
 set(NANO_PREFIX "")
