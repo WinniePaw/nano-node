@@ -221,7 +221,7 @@ public:
 			default_node_port = 7045;
 			default_rpc_port = 7046;
 			default_ipc_port = 7047;
-			default_websocket_port = 7078;
+			default_websocket_port = 7048;
 		}
 		else if (is_beta_network ())
 		{
